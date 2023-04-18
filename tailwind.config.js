@@ -29,4 +29,5 @@ tailwind.config = {
         }
     }
 }
+AOS.init();
 

@@ -13,6 +13,11 @@
             .content-auto {
                 content-visibility: auto;
             }
+            .hiddenMenu {
+                display: none;
+                transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+                transition: .3s;
+            }
         }
     </style>
     <title>Ableton frontEnd Challenge</title>
@@ -21,15 +26,22 @@
 <body class="max-[1024px]:overflow-x-hidden">
     <div class="w-full bg-grey h-100">
         <div class="max-w-[100rem] bg-white h-full mx-auto">
-            <header class="w-full"  >
+            <header class="w-full">
                 <div class="upper_header flex p-6 justify-between">
-                    <div class="logo absolute top-5">
+                    <div class="logo absolute top-5 z-10">
                         <a href="#">
-                            <img class="ml-2 h-8 w-[3.75rem]" src="assets/logo.svg" alt="">
+                            <!-- <img class="" src="assets/logo.svg" alt=""> -->
+                            <svg role="img" aria-labelledby="logo" class="ml-2 h-8 w-[3.75rem]"
+                                xmlns="http://www.w3.org/2000/svg" width="45" height="21" viewBox="0 0 45 21">
+                                <path
+                                    d="M0 0h3v21H0zM6 0h3v21H6zM12 0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z">
+                                </path>
+                            </svg>
                         </a>
                     </div>
                     <div class="main-menu-list sm:hidden md:hidden lg:flex">
-                        <ul class="first:ml-[5rem] [&>li]:font-semibold [&>li]:inline xl:[&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-base">
+                        <ul
+                            class="first:ml-[5rem] [&>li]:font-semibold [&>li]:inline xl:[&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-base">
                             <li><a href="#">Live</a></li>
                             <li><a href="#">Push</a></li>
                             <li><a href="#">Note</a></li>
@@ -43,32 +55,40 @@
                     <div class="secondary-menu-list sm:hidden md:hidden lg:flex">
                         <ul class="[&>li]:font-semibold [&>li]:inline xl:[&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-base">
                             <li class="inline "><a href="#" class="text-blue">Try live for free</a></li>
-                            <li class="inline" ><a href="#" class=" text-sm">Login to register</a></li>
+                            <li class="inline"><a href="#" class=" text-sm">Login to register</a></li>
                         </ul>
                     </div>
-                    <div class="main-menu-list mobile_menu lg:hidden">
-                        <button type="button" class="Mobile menu button">Menu </button>
-                        <ul class="first:ml-[5rem] [&>li]:font-semibold [&>li]:inline xl:[&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-base">
-                            <li><a href="#">Live</a></li>
-                            <li><a href="#">Push</a></li>
-                            <li><a href="#">Note</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Packs</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#" class="text-orange">More +</a></li>
-                        </ul>
-                    </div>
-                    <div class="secondary-menu-list mobile_menu_secondary lg:hidden">
-                        <ul class="[&>li]:font-semibold [&>li]:inline xl:[&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-base">
-                            <li class="inline "><a href="#" class="text-blue">Try live for free</a></li>
-                            <li class="inline" ><a href="#" class=" text-sm">Login to register</a></li>
-                        </ul>
+                    <button type="button"
+                        class="mobile_menu_button lg:hidden flex text-xl ml-24 cursor-pointer z-10 relative">
+                        Menu
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-[2.5vw] ml-2 absolute top-2 -right-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </button>
+                    <div
+                        class="mobile-menu w-full bg-blue lg:hidden absolute top-[-100vh] left-0 pt-12 w-full h-[100vh] transition-all ease-out duration-500 top-0">
+                        <div class="mobile_menu" >
+                            <ul
+                                class="ml-6 [&>li]:font-semibold [&>li]:text-white [&>li]:my-8 [&>li]:px-2.5 [&>li]:text-base">
+                                <li><a href="#">Live</a></li>
+                                <li><a href="#">Push</a></li>
+                                <li><a href="#">Note</a></li>
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Packs</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">More +</a></li>
+                                <li><a href="#">Try live for free</a></li>
+                                <li><a href="#">Login to register</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="separator bg-grey h-[0.2rem]"></div>
                 <div class="low-header py-6 flex items-start">
-                    <ul class="first:ml-3 [&>li]:font-semibold [&>li]:inline [&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-sm">
+                    <ul
+                        class="first:ml-3 [&>li]:font-semibold [&>li]:inline [&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-sm">
                         <li><a href="#" class="text-orange">About</a></li>
                         <li><a href="#">Jobs</a></li>
                         <li><a href="#">Apprenticeship</a></li>
@@ -76,68 +96,120 @@
                 </div>
             </header>
             <main class="w-full block">
-                <section class="hero w-5/6 mx-auto h-4/6 bg-hero-pattern flex items-center justify-center max-w-2xl:aspect-square h-[49rem] bg-center bg-no-repeat bg-cover ">
+                <section
+                    class="hero w-5/6 mx-auto h-4/6 bg-hero-pattern flex items-center justify-center max-w-2xl:aspect-square h-[49rem] bg-center bg-no-repeat bg-cover ">
                     <h1 class="text-[#FD5948] font-semibold sm:text-[7rem]">Ableton</h1>
                 </section>
                 <section class="text-content w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" data-aos="fade-up">
-                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 " >We make <span class="text-blue">Live</span>, <span class="text-blue">Push</span> and <span class="text-blue">Link</span> — unique software and hardware for music creation and performance. With these products, our community of users creates amazing things.</h3>
-                    <p class="mt-2 lg:mt-0 leading-[2]">Ableton was founded in 1999 and released the first version of Live in 2001. Our products are used by a community of dedicated musicians, sound designers, and artists from across the world.</p>
+                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">We make <span
+                            class="text-blue">Live</span>, <span class="text-blue">Push</span> and <span
+                            class="text-blue">Link</span> — unique software and hardware for music creation and
+                        performance. With these products, our community of users creates amazing things.</h3>
+                    <p class="mt-2 lg:mt-0 leading-[2]">Ableton was founded in 1999 and released the first version of
+                        Live in 2001. Our products are used by a community of dedicated musicians, sound designers, and
+                        artists from across the world.</p>
                 </section>
                 <section class="pictural_container relative flex flex-col justify-center h-[58vw] lg:h-[50vw]">
                     <div class="absolute top-0 right-0 bg-yellow w-7/12 aspect-square" data-aos="fade-up"></div>
                     <div class="img_container flex items-center relative">
-                        <div class="bg-photo_1 bg-center bg-no-repeat bg-cover w-6/12 lg:w-5/12 aspect-square ml-16 lg:ml-32" data-aos="fade-left"></div>
-                        <div class="bg-photo_2 bg-center bg-no-repeat bg-cover w-5/12 lg:w-4/12 h-[10rem] lg:h-[25rem] mx-[4rem]  lg:ml-32" data-aos="fade-right"></div>
+                        <div class="bg-photo_1 bg-center bg-no-repeat bg-cover w-6/12 lg:w-5/12 aspect-square ml-16 lg:ml-32"
+                            data-aos="fade-left"></div>
+                        <div class="bg-photo_2 bg-center bg-no-repeat bg-cover w-5/12 lg:w-4/12 h-[10rem] lg:h-[25rem] mx-[4rem]  lg:ml-32"
+                            data-aos="fade-right"></div>
                     </div>
                 </section>
                 <section class="text-content w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" data-aos="fade-up">
-                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 " >Making music isn’t easy. It takes time, effort, and learning. But when you’re in the flow, it’s incredibly rewarding.</h3>
-                    <p class="mt-2 lg:mt-0 leading-[2]">We feel the same way about making Ableton products. The driving force behind Ableton is our passion for what we make, and the people we make it for.</p>
+                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">Making music isn’t easy. It takes
+                        time, effort, and learning. But when you’re in the flow, it’s incredibly rewarding.</h3>
+                    <p class="mt-2 lg:mt-0 leading-[2]">We feel the same way about making Ableton products. The driving
+                        force behind Ableton is our passion for what we make, and the people we make it for.</p>
                 </section>
                 <div class="section youtube_content w-4/6 lg:w-3/6 mx-auto my-[2rem] lg:my-[8rem]">
-                    <iframe class="w-full h-[250px] lg:h-[450px] aspect-ratio" src="https://www.youtube.com/embed/KccTOft9uX0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>  
+                    <iframe class="w-full h-[250px] lg:h-[450px] aspect-ratio"
+                        src="https://www.youtube.com/embed/KccTOft9uX0?controls=0" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
                 <section class="text-content w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" data-aos="fade-up">
-                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 " >We are more than 350 people from 30 different countries divided between our headquarters in Berlin and our offices in Los Angeles and Tokyo.</h3>
-                    <p class="mt-2 lg:mt-0 leading-[2]">Most of us are active musicians, producers, and DJs, and many of us use Live and Push every day. We come from a wide range of cultural and professional backgrounds. Some of us have PhDs, some are self-taught, and most of us are somewhere in between. What connects us is the shared belief that each of us has the skills and knowledge to contribute to something big: helping to shape the future of music culture.</p>
+                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">We are more than 350 people from
+                        30 different countries divided between our headquarters in Berlin and our offices in Los Angeles
+                        and Tokyo.</h3>
+                    <p class="mt-2 lg:mt-0 leading-[2]">Most of us are active musicians, producers, and DJs, and many of
+                        us use Live and Push every day. We come from a wide range of cultural and professional
+                        backgrounds. Some of us have PhDs, some are self-taught, and most of us are somewhere in
+                        between. What connects us is the shared belief that each of us has the skills and knowledge to
+                        contribute to something big: helping to shape the future of music culture.</p>
                 </section>
                 <section class="pictural_container relative flex flex-col justify-center h-[75vw]">
                     <div class="absolute top-0 left-0 bg-green w-7/12 h-[75vw]" data-aos="fade-right"></div>
                     <div class="img_container flex flex-row-reverse items-center relative">
-                        <div class="bg-photo_5 bg-center bg-no-repeat bg-cover w-5/12 aspect-square mr-16" data-aos="fade-left" data-aos-duration="750"></div>
+                        <div class="bg-photo_5 bg-center bg-no-repeat bg-cover w-5/12 aspect-square mr-16"
+                            data-aos="fade-left" data-aos-duration="750"></div>
                         <div class="flex flex-col w-4/12 h-auto mr-16 lg:mr-32">
-                            <div class="bg-photo_4 bg-center bg-no-repeat bg-cover w-full h-[25vw] mb-16 lg:mb-32" data-aos="fade-down" data-aos-duration="750"></div>
-                            <div class="bg-photo_3 bg-center bg-no-repeat bg-cover w-full h-[25vw]" data-aos="fade-up" data-aos-duration="500"></div>
+                            <div class="bg-photo_4 bg-center bg-no-repeat bg-cover w-full h-[25vw] mb-16 lg:mb-32"
+                                data-aos="fade-down" data-aos-duration="750"></div>
+                            <div class="bg-photo_3 bg-center bg-no-repeat bg-cover w-full h-[25vw]" data-aos="fade-up"
+                                data-aos-duration="500"></div>
                         </div>
                     </div>
                 </section>
                 <section class="text-content w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" data-aos="fade-up">
-                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 " >We believe it takes focus to create truly outstanding instruments. We only work on a few products and we strive to make them great.</h3>
-                    <p class="mt-2 lg:mt-0 leading-[2]">Rather than having a one-size-fits-all process, we try to give our people what they need to work their magic and grow. We’ve learned that achieving the best results comes from building teams that are richly diverse, and thus able to explore problems from a wider set of perspectives. We don’t always agree with each other, but opinion and debate are valued and openly encouraged.</p>
+                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">We believe it takes focus to
+                        create truly outstanding instruments. We only work on a few products and we strive to make them
+                        great.</h3>
+                    <p class="mt-2 lg:mt-0 leading-[2]">Rather than having a one-size-fits-all process, we try to give
+                        our people what they need to work their magic and grow. We’ve learned that achieving the best
+                        results comes from building teams that are richly diverse, and thus able to explore problems
+                        from a wider set of perspectives. We don’t always agree with each other, but opinion and debate
+                        are valued and openly encouraged.</p>
                 </section>
-                <section class="hero w-5/6 mx-auto bg-poster-meet-the-makers flex items-center justify-center h-[50vw] lg:h-[40vw] bg-center bg-no-repeat bg-cover "data-aos="zoom-in"></section>
+                <section
+                    class="hero w-5/6 mx-auto bg-poster-meet-the-makers flex items-center justify-center h-[50vw] lg:h-[40vw] bg-center bg-no-repeat bg-cover "
+                    data-aos="zoom-in"></section>
                 <section class="text-content w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" data-aos="fade-up">
-                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 " >We’re passionate about what we do, but we’re equally passionate about improving who we are.</h3>
-                    <p class="leading-[2] mb-6">We work hard to foster an environment where people can grow both personally and professionally, and we strive to create a wealth of opportunities to learn from and with each other.</p>
-                    <p class="mt-2 lg:mt-0 leading-[2]">Alongside an internal training program, employees are actively supported in acquiring new knowledge and skills, and coached on applying these in their daily work. In addition, staff-organized development and music salons are a chance to discuss new technologies, production techniques and best practices.</p>
+                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">We’re passionate about what we do,
+                        but we’re equally passionate about improving who we are.</h3>
+                    <p class="leading-[2] mb-6">We work hard to foster an environment where people can grow both
+                        personally and professionally, and we strive to create a wealth of opportunities to learn from
+                        and with each other.</p>
+                    <p class="mt-2 lg:mt-0 leading-[2]">Alongside an internal training program, employees are actively
+                        supported in acquiring new knowledge and skills, and coached on applying these in their daily
+                        work. In addition, staff-organized development and music salons are a chance to discuss new
+                        technologies, production techniques and best practices.</p>
                 </section>
                 <section class="pictural_container relative flex flex-col justify-center h-[66vw]">
-                    <div class="absolute top-0 left-[16%] mx-auto bg-pink w-2/3 h-[66vw] lg:aspect-squaredata-aos="fade-up"></div>
+                    <div class="absolute top-0 left-[16%] mx-auto bg-pink w-2/3 h-[66vw] lg:aspect-squaredata-aos="
+                        fade-up"></div>
                     <div class="img_container flex flex-row-reverse items-center justify-between relative">
-                        <div class="bg-photo_7 bg-center bg-no-repeat bg-cover w-5/12 aspect-square" data-aos="fade-right"></div>
-                        <div class="bg-photo_6-a bg-center bg-no-repeat bg-cover w-4/12 h-[25vw] ml-16 lg:ml-32" data-aos="fade-left" data-aos-delay="350" data-aos-duration="750"></div>
+                        <div class="bg-photo_7 bg-center bg-no-repeat bg-cover w-5/12 aspect-square"
+                            data-aos="fade-right"></div>
+                        <div class="bg-photo_6-a bg-center bg-no-repeat bg-cover w-4/12 h-[25vw] ml-16 lg:ml-32"
+                            data-aos="fade-left" data-aos-delay="350" data-aos-duration="750"></div>
                     </div>
                 </section>
-                <section class="text-content w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" >
-                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 " data-aos="fade-up">We want our employees to love it here. Since we’re looking for exceptional talent from around the world, we will do everything we can to make your transition as easy as possible.</h3>
-                    <p class="leading-[2] mb-6">If you're joining us in Berlin, we'll help with relocation and paperwork. We’ll even provide you with free German or English lessons. Plus, working in Germany means you can expect comprehensive health insurance for you and your family, as well as generous maternity and paternity leave. Office hours are flexible, but it’s not all work; we have several company and team outings throughout the year as well as a variety of fun, informal small-group activities.</p>
+                <section class="text-content w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]">
+                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 " data-aos="fade-up">We want our
+                        employees to love it here. Since we’re looking for exceptional talent from around the world, we
+                        will do everything we can to make your transition as easy as possible.</h3>
+                    <p class="leading-[2] mb-6">If you're joining us in Berlin, we'll help with relocation and
+                        paperwork. We’ll even provide you with free German or English lessons. Plus, working in Germany
+                        means you can expect comprehensive health insurance for you and your family, as well as generous
+                        maternity and paternity leave. Office hours are flexible, but it’s not all work; we have several
+                        company and team outings throughout the year as well as a variety of fun, informal small-group
+                        activities.</p>
                 </section>
                 <section class="latest_jobs w-5/6 mx-auto h-4/6 flex flex-col lg:flex-row mb-32">
-                    <div class="bg-photo_8 w-full lg:w-1/2 h-[50vw] lg:h-full lg:aspect-square bg-center bg-cover" data-aos="fade-right" data-aos-duration="750"></div>
-                    <div class="bg-purple w-full lg:w-1/2 flex lg:aspect-square flex-col justify-center items-center py-16">
+                    <div class="bg-photo_8 w-full lg:w-1/2 h-[50vw] lg:h-full lg:aspect-square bg-center bg-cover"
+                        data-aos="fade-right" data-aos-duration="750"></div>
+                    <div
+                        class="bg-purple w-full lg:w-1/2 flex lg:aspect-square flex-col justify-center items-center py-16">
                         <div class="flex flex-col w-5/6  items-start " data-aos="fade-left">
-                            <h3 class="block font-semibold leading-[1.8] xl:text-[1.6rem] lg:mb-7 " >We’re really proud of the work we’ve done so far. But there’s so much more to come. If you’d like to be a part of it, please join us.</h3>
-                            <a href="" class="text-blue font-base lg:mt-0 mt-4 lg:text-[1.6rem]" data-aos="fade-left" data-aos-delay="500" data-ease="ease-in-out">See latest's jobs ></a>
+                            <h3 class="block font-semibold leading-[1.8] xl:text-[1.6rem] lg:mb-7 ">We’re really proud
+                                of the work we’ve done so far. But there’s so much more to come. If you’d like to be a
+                                part of it, please join us.</h3>
+                            <a href="" class="text-blue font-base lg:mt-0 mt-4 lg:text-[1.6rem]" data-aos="fade-left"
+                                data-aos-delay="500" data-ease="ease-in-out">See latest's jobs ></a>
                         </div>
                     </div>
                 </section>

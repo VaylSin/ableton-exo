@@ -31,3 +31,13 @@ tailwind.config = {
 }
 AOS.init();
 
+const btn = document.querySelector('.mobile_menu_button');
+const menu = document.querySelector('.mobile-menu');
+const logo = document.querySelector('.logo');
+
+btn.addEventListener('click', () => {
+    menu.classList.toggle('top-[-100vh]');
+    btn.classList.toggle('text-white');
+    // logo.classList.toggle('')
+})
+

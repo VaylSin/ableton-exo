@@ -28,7 +28,7 @@
                             <img class="ml-2 h-8 w-[3.75rem]" src="assets/logo.svg" alt="">
                         </a>
                     </div>
-                    <div class="main-menu-list">
+                    <div class="main-menu-list sm:hidden md:hidden lg:flex">
                         <ul class="first:ml-[5rem] [&>li]:font-semibold [&>li]:inline xl:[&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-base">
                             <li><a href="#">Live</a></li>
                             <li><a href="#">Push</a></li>
@@ -40,7 +40,26 @@
                             <li><a href="#" class="text-orange">More +</a></li>
                         </ul>
                     </div>
-                    <div class="secondary-menu-list">
+                    <div class="secondary-menu-list sm:hidden md:hidden lg:flex">
+                        <ul class="[&>li]:font-semibold [&>li]:inline xl:[&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-base">
+                            <li class="inline "><a href="#" class="text-blue">Try live for free</a></li>
+                            <li class="inline" ><a href="#" class=" text-sm">Login to register</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-menu-list mobile_menu lg:hidden">
+                        <button type="button" class="Mobile menu button">Menu </button>
+                        <ul class="first:ml-[5rem] [&>li]:font-semibold [&>li]:inline xl:[&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-base">
+                            <li><a href="#">Live</a></li>
+                            <li><a href="#">Push</a></li>
+                            <li><a href="#">Note</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Packs</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#" class="text-orange">More +</a></li>
+                        </ul>
+                    </div>
+                    <div class="secondary-menu-list mobile_menu_secondary lg:hidden">
                         <ul class="[&>li]:font-semibold [&>li]:inline xl:[&>li]:mx-2.5 [&>li]:px-2.5 [&>li]:text-base">
                             <li class="inline "><a href="#" class="text-blue">Try live for free</a></li>
                             <li class="inline" ><a href="#" class=" text-sm">Login to register</a></li>
@@ -64,7 +83,7 @@
                     <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 " >We make <span class="text-blue">Live</span>, <span class="text-blue">Push</span> and <span class="text-blue">Link</span> — unique software and hardware for music creation and performance. With these products, our community of users creates amazing things.</h3>
                     <p class="mt-2 lg:mt-0 leading-[2]">Ableton was founded in 1999 and released the first version of Live in 2001. Our products are used by a community of dedicated musicians, sound designers, and artists from across the world.</p>
                 </section>
-                <section class="pictural_container relative flex flex-col justify-center h-[58vw]">
+                <section class="pictural_container relative flex flex-col justify-center h-[58vw] lg:h-[50vw]">
                     <div class="absolute top-0 right-0 bg-yellow w-7/12 aspect-square" data-aos="fade-up"></div>
                     <div class="img_container flex items-center relative">
                         <div class="bg-photo_1 bg-center bg-no-repeat bg-cover w-6/12 lg:w-5/12 aspect-square ml-16 lg:ml-32" data-aos="fade-left"></div>
@@ -106,7 +125,7 @@
                     <div class="absolute top-0 left-[16%] mx-auto bg-pink w-2/3 h-[66vw] lg:aspect-squaredata-aos="fade-up"></div>
                     <div class="img_container flex flex-row-reverse items-center justify-between relative">
                         <div class="bg-photo_7 bg-center bg-no-repeat bg-cover w-5/12 aspect-square" data-aos="fade-right"></div>
-                        <div class="bg-photo_6-a bg-center bg-no-repeat bg-cover w-4/12 h-[25vw] ml-32" data-aos="fade-left" data-aos-delay="350" data-aos-duration="750"></div>
+                        <div class="bg-photo_6-a bg-center bg-no-repeat bg-cover w-4/12 h-[25vw] ml-16 lg:ml-32" data-aos="fade-left" data-aos-delay="350" data-aos-duration="750"></div>
                     </div>
                 </section>
                 <section class="text-content w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" >

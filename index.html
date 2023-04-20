@@ -9,6 +9,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style type="text/tailwindcss">
         @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap');
+        @layer base {
+            @font-face {
+                font-family: 'Futura';
+                font-display: swap;
+                src: url('assets/fonts/futura-pt-book.woff2') format('woff2');
+            }
+        }
         @layer utilities {
             .content-auto {
                 content-visibility: auto;
@@ -68,7 +75,7 @@
                     </button>
                     <div
                         class="mobile-menu w-full bg-blue lg:hidden absolute top-[-100vh] left-0 pt-12 w-full h-[100vh] transition-all ease-out duration-500 top-0">
-                        <div class="mobile_menu" >
+                        <div class="mobile_menu">
                             <ul
                                 class="ml-6 [&>li]:font-semibold [&>li]:text-white [&>li]:my-8 [&>li]:px-2.5 [&>li]:text-base">
                                 <li><a href="#">Live</a></li>
@@ -119,8 +126,8 @@
                     </div>
                 </section>
                 <section class="xt-content w-5/6 sm:w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" data-aos="fade-up">
-                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">Making music isn’t easy. It takes
-                        time, effort, and learning. But when you’re in the flow, it’s incredibly rewarding.</h3>
+                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">Making music isn't easy. It takes
+                        time, effort, and learning. But when you're in the flow, it's incredibly rewarding.</h3>
                     <p class="mt-2 lg:mt-0 leading-[2]">We feel the same way about making Ableton products. The driving
                         force behind Ableton is our passion for what we make, and the people we make it for.</p>
                 </section>
@@ -129,7 +136,8 @@
                         src="https://www.youtube.com/embed/KccTOft9uX0?controls=0" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                        allowfullscreen>
+                    </iframe>
                 </div>
                 <section class="xt-content w-5/6 sm:w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" data-aos="fade-up">
                     <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">We are more than 350 people from
@@ -147,9 +155,9 @@
                         <div class="bg-photo_5 bg-center bg-no-repeat bg-cover w-5/12 aspect-square mr-16"
                             data-aos="fade-left" data-aos-duration="750"></div>
                         <div class="flex flex-col w-4/12 h-auto mr-16 lg:mr-32">
-                            <div class="bg-photo_4 bg-center bg-no-repeat bg-cover w-full h-[25vw] mb-16 lg:mb-32"
+                            <div class="bg-photo_4 bg-center bg-no-repeat bg-cover w-full h-[20vw] mb-16 lg:mb-32"
                                 data-aos="fade-down" data-aos-duration="750"></div>
-                            <div class="bg-photo_3 bg-center bg-no-repeat bg-cover w-full h-[25vw]" data-aos="fade-up"
+                            <div class="bg-photo_3 bg-center bg-no-repeat bg-cover w-full h-[20vw]" data-aos="fade-up"
                                 data-aos-duration="500"></div>
                         </div>
                     </div>
@@ -159,17 +167,17 @@
                         create truly outstanding instruments. We only work on a few products and we strive to make them
                         great.</h3>
                     <p class="mt-2 lg:mt-0 leading-[2]">Rather than having a one-size-fits-all process, we try to give
-                        our people what they need to work their magic and grow. We’ve learned that achieving the best
+                        our people what they need to work their magic and grow. We've learned that achieving the best
                         results comes from building teams that are richly diverse, and thus able to explore problems
-                        from a wider set of perspectives. We don’t always agree with each other, but opinion and debate
+                        from a wider set of perspectives. We don't always agree with each other, but opinion and debate
                         are valued and openly encouraged.</p>
                 </section>
                 <section
                     class="hero w-5/6 mx-auto bg-poster-meet-the-makers flex items-center justify-center h-[50vw] lg:h-[40vw] bg-center bg-no-repeat bg-cover "
                     data-aos="zoom-in"></section>
                 <section class="xt-content w-5/6 sm:w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]" data-aos="fade-up">
-                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">We’re passionate about what we do,
-                        but we’re equally passionate about improving who we are.</h3>
+                    <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 ">We're passionate about what we do,
+                        but we're equally passionate about improving who we are.</h3>
                     <p class="leading-[2] mb-6">We work hard to foster an environment where people can grow both
                         personally and professionally, and we strive to create a wealth of opportunities to learn from
                         and with each other.</p>
@@ -178,8 +186,8 @@
                         work. In addition, staff-organized development and music salons are a chance to discuss new
                         technologies, production techniques and best practices.</p>
                 </section>
-                <section class="pictural_container relative flex flex-col justify-center h-[66vw]">
-                    <div class="absolute top-0 left-[16%] mx-auto bg-pink w-2/3 h-[66vw] lg:aspect-squaredata-aos="
+                <section class="pictural_container relative flex flex-col justify-center h-[50vw] ">
+                    <div class="absolute top-0 left-[16%] mx-auto bg-pink w-2/3 h-[50vw] " data-aos="
                         fade-up"></div>
                     <div class="img_container flex flex-row-reverse items-center justify-between relative">
                         <div class="bg-photo_7 bg-center bg-no-repeat bg-cover w-5/12 aspect-square"
@@ -190,12 +198,12 @@
                 </section>
                 <section class="xt-content w-5/6 sm:w-4/6 xl:w-3/6 mx-auto my-[4rem] lg:my-[8rem]">
                     <h3 class="font-semibold leading-[1.8] lg:text-[1.6rem] lg:mb-7 " data-aos="fade-up">We want our
-                        employees to love it here. Since we’re looking for exceptional talent from around the world, we
+                        employees to love it here. Since we're looking for exceptional talent from around the world, we
                         will do everything we can to make your transition as easy as possible.</h3>
                     <p class="leading-[2] mb-6">If you're joining us in Berlin, we'll help with relocation and
-                        paperwork. We’ll even provide you with free German or English lessons. Plus, working in Germany
+                        paperwork. We'll even provide you with free German or English lessons. Plus, working in Germany
                         means you can expect comprehensive health insurance for you and your family, as well as generous
-                        maternity and paternity leave. Office hours are flexible, but it’s not all work; we have several
+                        maternity and paternity leave. Office hours are flexible, but it's not all work; we have several
                         company and team outings throughout the year as well as a variety of fun, informal small-group
                         activities.</p>
                 </section>
@@ -204,9 +212,9 @@
                         data-aos="fade-right" data-aos-duration="750"></div>
                     <div
                         class="bg-purple w-full lg:w-1/2 flex lg:aspect-square flex-col justify-center items-center py-16">
-                        <div class="flex flex-col w-5/6  items-start " data-aos="fade-left">
-                            <h3 class="block font-semibold leading-[1.8] xl:text-[1.6rem] lg:mb-7 ">We’re really proud
-                                of the work we’ve done so far. But there’s so much more to come. If you’d like to be a
+                        <div class="flex flex-col w-5/6 lg:w-3/6  items-start " data-aos="fade-left">
+                            <h3 class="block font-semibold leading-[1.8] xl:text-[1.6rem] lg:mb-7 ">We're really proud
+                                of the work we've done so far. But there's so much more to come. If you'd like to be a
                                 part of it, please join us.</h3>
                             <a href="" class="text-blue font-base lg:mt-0 mt-4 lg:text-[1.6rem]" data-aos="fade-left"
                                 data-aos-delay="500" data-ease="ease-in-out">See latest's jobs ></a>
@@ -214,8 +222,177 @@
                     </div>
                 </section>
                 <div class="separator bg-grey h-[0.2rem]"></div>
-                <footer>
+                <footer class="p-32">
+                    <div class="img-container block w-full">
+                        <img src="assets/logo_footer.svg" alt="" class="w-48 mb-24">
+                    </div>
+                    <div class="w-full grid-cols-4 grid gap-4">
+                        <div class="list-container col-span-1 h-48  flex flex-col">
+                            <ul class="list-none">
+                                <li>
+                                    <a href="#" class="relative text-xl">Register Live or Push
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="relative text-xl">About Ableton
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="relative text-xl">Jobs
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <ul class="list-none flex [&>li]:w-10 [&>li]:h-10 [&>li>a]:w-10 [&>li>a]:h-10 mt-4">
+                                        <li class="grid mr-2 ">
+                                            <a href="#" class="bg-[#3477F2]">
+                                                <img src="assets/facebook.svg" alt="" >
+                                            </a>
+                                        </li>
+                                        <li class="grid mr-2 ">
+                                            <a href="#" class="bg-[#1DA1F2] ">
+                                                <img src="assets/twitter.svg" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="grid mr-2 ">
+                                            <a href="#" class="bg-[#FF001D] ">
+                                                <img src="assets/youtube.svg" alt="">
+                                            </a>
+                                        </li>
+                                        <li class="grid mr-2 ">
+                                            <a href="#" class="bg-[#F77737] ">
+                                                <img src="assets/instagram.svg" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <div class="list-container col-span-1 h-48  flex flex-col">
 
+                            <ul class="list-none">
+                                <li class="font-semibold text-xl">Education</li>
+                                <li>
+                                    <a href="#" class="relative text-xl">Offers for students and teachers
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="relative text-xl">Ableton for the Classroom
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="relative text-xl">Ableton for Colleges and Universities
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list-container col-span-2 h-48  flex flex-col">
+                            <p class="font-semibold text-xl">Sign up to our newsletter</p>
+                            <p class="font-base text-xl">Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more.</p>
+                            <form class="flex">
+                                <input 
+                                    type="email"
+                                    class="bg-grey w-96 h-10 pl-4 mt-4 text-xl rounded-none"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Email adress"
+                                >
+                                <input type="submit" value="Sign up" class="bg-blue text-white px-8 mt-4 h-10 cursor pointer text-xl font-semibold">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="w-full grid-cols-4 grid gap-4">
+                        <div class="list-container col-span-1 h-48  flex flex-col">
+                            <ul class="list-none">
+                                <li class="font-semibold text-xl">Community</li>
+                                <li>
+                                    <a href="#" class="relative text-xl">Find Ableton User Groups
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="relative text-xl">Find Certified Training
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="relative text-xl">Become a Certified Trainer
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        <div class="list-container col-span-1 h-48 flex flex-col">
+                            <ul class="list-none ">
+                                <li class="font-semibold text-xl">Distributors
+                                </li>
+                                <li>
+                                    <a href="#" class="relative text-xl">Find Distributors
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="relative text-xl">Try Push in-store
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 absolute top-2 -right-4">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list-container col-span-2 h-48 flex flex-col">
+
+                        </div>
+                    </div>
                 </footer>
 
             </main>

@@ -24,7 +24,7 @@ tailwind.config = {
                 blue: '#0000ff'
             },
             fontFamily: {
-                sans: ['Red Hat Text', 'sans-serif'],
+                sans: ['Futura', 'sans-serif'],
             }
         }
     }
@@ -38,6 +38,5 @@ const logo = document.querySelector('.logo');
 btn.addEventListener('click', () => {
     menu.classList.toggle('top-[-100vh]');
     btn.classList.toggle('text-white');
-    // logo.classList.toggle('')
 })
 
